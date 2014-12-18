@@ -9,12 +9,14 @@ package { 'sails':
   require  => Class['nodejs']
 }
 
+/*
 exec { 'sails-depends' :
       cwd => '/vagrant',
       command => 'npm install',
       require => Package['sails'],
       path => ['/usr/local/node/node-default/bin/','/usr/bin/',"/usr/bin", "/bin", "/usr/sbin", "/sbin", "/usr/local/bin", "/usr/local/sbin"],
-  }
+}
+*/
 
 package { 'ruby-dev':
         ensure => installed,
